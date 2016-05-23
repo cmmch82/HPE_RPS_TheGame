@@ -1,44 +1,132 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
+ <!--<![endif]-->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <!-- meta character set -->
+    <meta charset="utf-8">
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title - The Game!!!</title>
+    <!-- Meta Description -->
+    <meta name="description" content="Blue One Page Creative HTML5 Template">
+    <meta name="keywords" content="one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation">
+    <meta name="author" content="Muhammad Morshed">
 
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+
+   @* <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>*@
+
+    <!-- Fontawesome Icon font -->
+    <link rel="stylesheet" href="~/Content/Template/css/font-awesome.min.css">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="~/Content/Template/css/jquery.fancybox.css">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="~/Content/Template/css/bootstrap.min.css">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="~/Content/Template/css/owl.carousel.css">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="~/Content/Template/css/slit-slider.css">
+    <!-- bootstrap.min -->
+    <link rel="stylesheet" href="~/Content/Template/css/animate.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="~/Content/Template/css/main.css">
+    <!-- Modernizer Script for old Browsers -->
+    <script src="~/Content/Template/js/modernizr-2.6.2.min.js"></script>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+
+<body id="body">
+    <!-- preloader -->
+    <div id="preloader">
+        <div class="loder-box">
+            <div class="battery"></div>
         </div>
     </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+    <!-- end preloader -->
+    <!--
+    Fixed Navigation
+    ==================================== -->
+    <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Rock-Paper-Scissors", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("Play Game", "Game", "Home")</li>
+
+                    </ul>
+            @*        @Html.Partial("_LoginPartial")*@
+                </div>
+            </div>
+
+
+
+
+
+    </header>
+    <!--
+    End Fixed Navigation
+    ==================================== -->
+
+    <main class="site-content" role="main">
+
+        @RenderBody()
+
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="footer-content">
+                    <div class="wow animated fadeInDown">
+                        <p>Copyright &copy; 2014-2016 By Carlos Mora.... </p>
+                        <p>The HPE logo is used just for the test ... please don't sue me!!</p>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Essential jQuery Plugins
+    ================================================== -->
+    <!-- Main jQuery -->
+    <script src="~/Content/Template/js/jquery-1.11.1.min.js"></script>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+
+    <!-- Twitter Bootstrap -->
+    <script src="~/Content/Template/js/bootstrap.min.js"></script>
+    <!-- Single Page Nav -->
+    <script src="~/Content/Template/js/jquery.singlePageNav.min.js"></script>
+    <!-- jquery.fancybox.pack -->
+    <script src="~/Content/Template/js/jquery.fancybox.pack.js"></script>
+    <!-- Google Map API 
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
+    <!-- Owl Carousel -->
+    <script src="~/Content/Template/js/owl.carousel.min.js"></script>
+    <!-- jquery easing -->
+    <script src="~/Content/Template/js/jquery.easing.min.js"></script>
+    <!-- Fullscreen slider -->
+    <script src="~/Content/Template/js/jquery.slitslider.js"></script>
+    <script src="~/Content/Template/js/jquery.ba-cond.min.js"></script>
+    <!-- onscroll animation -->
+    <script src="~/Content/Template/js/wow.min.js"></script>
+    <!-- Custom Functions -->
+    <script src="~/Content/Template/js/main.js"></script>
+    <script src="../directives/onReadFileDirective.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
